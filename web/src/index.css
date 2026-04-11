@@ -1,0 +1,14 @@
+body {
+  background-color: rgb(137, 255, 41);
+  color: black;
+}
+button {
+  background-color: rgb(165, 255, 165);
+}
+input {
+  background-color: rgb(165, 255, 165);
+  color: black
+}
+ul {
+  list-style: none;
+}
