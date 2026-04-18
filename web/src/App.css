@@ -1,0 +1,111 @@
+/* Reset básico e centralização */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(to right, #272727, #3f2758, #272727);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+/* Container principal */
+.container {
+  width: 100%;
+  max-width: 450px;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilização do Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+input {
+  padding: 0.8rem;
+  border: 1.5px solid #e1e1e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #272727;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+/* Botão de Salvar */
+button {
+  background: linear-gradient(to top, #272727, #764ba2);
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s active;
+}
+
+button:hover {
+  background-color: #1b1b1b;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Lista de Tarefas */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #eee;
+}
+
+li {
+  background: #fff;
+  padding: 1rem;
+  margin-top: 0.8rem;
+  border-radius: 8px;
+  border-left: 5px solid #764ba2;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+li:hover {
+  transform: translateX(5px);
+}
+
+/* Estilo para o Título e Descrição na lista */
+li strong {
+  font-size: 1.1rem;
+  color: #222;
+}
+
+li span {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 4px;
+}

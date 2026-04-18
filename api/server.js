@@ -42,6 +42,7 @@ app.get('/tarefas', async function (req, res) {
 });
 
 app.post('/tarefas', async function (req, res) {
+    try {
         const {title, description} = req.body;
         const { rows: data} = await pool.query("INSERT INTO tasks (title, description) VALUES ($1, $2)", [
             title,
@@ -49,13 +50,18 @@ app.post('/tarefas', async function (req, res) {
         ]);
 
         res.status(201).json({ data });
+    } catch (err) {
+        console.log({err})
+        res.status(500).json({ error: err.message });
+    }
 });
 
-app.put('/tarefas', function (req, res) {
+app.put('/tarefas/:id', function (req, res) {
+   const { id } = req.params
     res.json([]);
 });
 
-app.delete('/tarefas', function (req, res) {
+app.delete('/tarefas/:id', function (req, res) {
     res.json([]);
 });
 
